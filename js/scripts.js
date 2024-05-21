@@ -16,7 +16,7 @@ function onInit() {
 async function cargarPlaneta() {
     mostrarSpinner();
     let str = await leer(KEY_STORAGE);
-    console.log("Contenido de str:", str); // Verifica el contenido de str
+    console.log("Contenido de str:", str);
     const objetos = jsonToObject(str) || [];
 
     if (!Array.isArray(objetos)) {
@@ -57,7 +57,7 @@ function onSubmit() {
         const distanciaAlSol = form.querySelector("#distanciaAlSol").value;
         const tieneVida = obtenerCheckbox("tieneVida");
         const tieneAnillo = obtenerCheckbox("tieneAnillo");
-        const compAtmosferica = form.querySelector("#composicion-atm").value;
+        const compAtmosferica = form.querySelector("#compAtmosferica").value;
 
         if (!nombre || !tamaño || !masa || !tipo || !distanciaAlSol || !compAtmosferica) {
             alert("Todos los campos son obligatorios");
